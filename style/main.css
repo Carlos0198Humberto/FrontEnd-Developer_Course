@@ -1,0 +1,333 @@
+/* Reset general */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    font-family: 'Comic Neue', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+  
+/* Navbar */
+header {
+    background-color: #ffffff;
+}
+  
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+  /* Logo y perfil */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+  
+  /* === Logo tipo botón === */
+.logo-boton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.logo-imagen {
+    height: 80px;
+}
+  
+.logo-texto {
+    position: absolute;
+    color: white;
+    background-color: #0039e6;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    left: 30px;
+    bottom: 10px;
+}
+  
+  /* === Foto de perfil === */
+.logo-container {
+    position: absolute;
+}
+  
+.logo-boton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.logo-imagen {
+    height: 80px;
+}
+  
+.logo-texto {
+    position: absolute;
+    color: white;
+    background-color: #0039e6;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    left: 30px;
+    bottom: 10px;
+}
+  
+  .perfil-container {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+}
+  
+.perfil-boton {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+  
+.perfil-boton img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #0039e6;
+}
+  
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 100%;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+.perfil-boton:hover .overlay {
+    opacity: 1;
+}
+  
+
+  
+/* Mueve el logo  */
+.control-logo {
+    top: 20px;     
+    left: 150px;    
+}
+  
+  /* Mueve la foto */
+.control-perfil {
+    bottom: 575px;  
+    right: 210px;   
+}
+  /* Contenedor principal */
+.navbar__center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+  
+  /* Formulario de búsqueda */
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 52px;
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    margin-left: -90px; /* o ajustá el valor para mover el contenedor */
+}
+  
+.search-form:focus-within {
+    border-color: #2ecc71;
+}
+  
+.search-form input {
+    flex: 1;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    height: 100%;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    max-width: 550px;
+}
+
+.search-button {
+    background-color: white;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    width: 80px;
+    border-radius: 10px;
+    padding: 0 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    height: 52px; /* igual altura que el form */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem; /* espacio entre form y botón */
+    position: absolute; /* elimina left y top para evitar desorden */
+    top: 16px;     /* Más arriba o abajo */
+    left: 850px;   /* Mueve hacia la izquierda */
+}
+  
+.search-button svg {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+}
+  
+  .search-button:hover svg {
+    fill: #0056b3; /* azul más oscuro al hover */
+}
+  
+.search-button:active {
+    background-color: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+}
+
+  
+  .search-button:active svg {
+    fill: #ffffff; /* Lupa blanca cuando está activo */
+}
+
+.search-button.active {
+    background-color: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+}
+  
+  .search-button.active svg {
+    fill: #ffffff;
+}
+  
+  
+  /* Botones de filtro */
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+  
+.filter-btn {
+    font-family: 'Comic Neue', sans-serif;
+    background-color: transparent;
+    border: 2px solid #007bff;
+    font-weight: 950;
+    border-radius: 10px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.0rem;
+}
+  
+.filter-btn.active,
+.filter-btn:focus,
+.filter-btn:active {
+    background-color: #d4f8d4;
+    color: #155724;
+    border-color: #28a745;
+}
+  
+  /* Línea verde divisoria */
+.green-divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #28a745, #b4e197);
+    opacity: 0.5;
+    margin-top: 1rem;
+    width: 90%;
+    border-radius: 3px;
+}
+  
+
+/*CARDSSSS*/
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: 3px solid green;
+  border-radius: 12px;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: white;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: #e6ffe6;
+  color: #333;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}

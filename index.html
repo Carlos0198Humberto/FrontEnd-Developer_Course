@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourSv</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/images/android-chrome-192x192.png" type="image/png" sizes="18x18">
+
+</head>
+<body>
+    <header>
+        
+        <nav class="navbar">
+          <!-- Logo -->
+          <div class="contenedor-general">
+
+            <!-- Logo tipo botón -->
+            <div class="logo-container control-logo">
+              <button class="logo-boton" onclick="window.location.href='index.html';">
+                <img src="./assets/images/toursv.png" alt="Logo Tour SV" class="logo-imagen">
+                <span class="logo-texto">Tour sv</span>
+              </button>
+            </div>
+        
+            <!-- Foto de perfil -->
+            <div class="perfil-container control-perfil">
+              <label for="fotoPerfil" class="perfil-boton">
+                <img src="./assets/images/Pic.jpg" alt="Foto de perfil" id="fotoPreview">
+                <div class="overlay">Subir</div>
+              </label>
+              <input type="file" id="fotoPerfil" accept="image/*" hidden onchange="mostrarFoto(event)">
+            </div>
+          </div>
+          
+          <!-- Buscador -->
+          <div class="navbar__center">
+            <form class="search-form" role="search">
+              <input type="text" placeholder="Buscar..." aria-label="Buscar" />
+            </form>
+      
+            <!-- Filtros justo debajo -->
+            <div class="filters">
+              <button class="filter-btn">Todos</button>
+              <button class="filter-btn">Historico</button>
+              <button class="filter-btn">Cultural</button>
+              <button class="filter-btn">Natural</button>
+              <button class="filter-btn">Recreativos</button>
+            </div>
+            <!-- Línea divisoria -->
+            <hr class="green-divider" />
+                </div>
+            </nav>
+
+        <button class="search-button" aria-label="Buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+        </button>
+      </header>
+
+      <main>
+        <section class="galeria">
+      
+            <article class="card">
+              <div class="card-inner">
+                <figure class="card-front">
+                  <img src="./assets/images/images.jpeg" alt="Imagen 1">
+                </figure>
+                <section class="card-back">
+                  <p>Esta es una descripción detrás de la imagen 1.</p>
+                </section>
+              </div>
+            </article>
+      
+            <article class="card">
+              <div class="card-inner">
+                <figure class="card-front">
+                  <img src="./assets/images/2.jpeg" alt="Imagen 2">
+                </figure>
+                <section class="card-back">
+                  <p>Esta es una descripción detrás de la imagen 2.</p>
+                </section>
+              </div>
+            </article>
+      
+            <article class="card">
+              <div class="card-inner">
+                <figure class="card-front">
+                  <img src="./assets/images/images.jpeg" alt="Imagen 3">
+                </figure>
+                <section class="card-back">
+                  <p>Esta es una descripción detrás de la imagen 3.</p>
+                </section>
+              </div>
+            </article>
+      
+            <article class="card">
+              <div class="card-inner">
+                <figure class="card-front">
+                  <img src="./assets/images/2.jpeg" alt="Imagen 4">
+                </figure>
+                <section class="card-back">
+                  <p>Esta es una descripción detrás de la imagen 4.</p>
+                </section>
+              </div>
+            </article>
+
+
+
+
+      </main>
+      
+    <script src="./src/script.js"></script>
+</body>
+</html>
